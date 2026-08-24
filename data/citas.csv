@@ -1,0 +1,19 @@
+codigo,dependienteCodigo,titulo,especialidad,fecha,hora,lugar
+C001,D01,Revisión de Cardiología,Cardiología,2026-09-10,09:30,Centro de Salud León
+C002,D02,Revisión de Medicina general,Medicina general,2026-09-11,11:00,Centro de Salud Madrid
+C003,D02,Revisión de Traumatología,Traumatología,2026-09-12,12:15,Centro de Salud Madrid
+C004,D03,Revisión de Traumatología,Traumatología,2026-09-12,12:15,Centro de Salud Sevilla
+C005,D04,Revisión de Neurología,Neurología,2026-09-13,16:45,Centro de Salud Valencia
+C006,D04,Revisión de Endocrino,Endocrino,2026-09-14,09:30,Centro de Salud Valencia
+C007,D05,Revisión de Endocrino,Endocrino,2026-09-14,09:30,Centro de Salud Zaragoza
+C008,D06,Revisión de Cardiología,Cardiología,2026-09-15,11:00,Centro de Salud León
+C009,D06,Revisión de Medicina general,Medicina general,2026-09-16,12:15,Centro de Salud León
+C010,D07,Revisión de Medicina general,Medicina general,2026-09-16,12:15,Centro de Salud Madrid
+C011,D08,Revisión de Traumatología,Traumatología,2026-09-17,16:45,Centro de Salud Sevilla
+C012,D08,Revisión de Neurología,Neurología,2026-09-18,09:30,Centro de Salud Sevilla
+C013,D09,Revisión de Neurología,Neurología,2026-09-18,09:30,Centro de Salud Valencia
+C014,D10,Revisión de Endocrino,Endocrino,2026-09-19,11:00,Centro de Salud Zaragoza
+C015,D10,Revisión de Cardiología,Cardiología,2026-09-20,12:15,Centro de Salud Zaragoza
+C016,D11,Revisión de Cardiología,Cardiología,2026-09-20,12:15,Centro de Salud León
+C017,D12,Revisión de Medicina general,Medicina general,2026-09-21,16:45,Centro de Salud Madrid
+C018,D12,Revisión de Traumatología,Traumatología,2026-09-22,09:30,Centro de Salud Madrid

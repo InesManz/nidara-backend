@@ -1,0 +1,49 @@
+codigo,dependienteCodigo,nombre,dosis,frecuencia,horario,critico
+M001,D01,Enalapril,10 mg,1 vez/día,08:00,TRUE
+M002,D01,Metformina,850 mg,2 veces/día,"08:00,20:00",TRUE
+M003,D01,Sintrom,según pauta,1 vez/día,18:00,TRUE
+M004,D02,Metformina,850 mg,2 veces/día,"08:00,20:00",TRUE
+M005,D02,Sintrom,según pauta,1 vez/día,18:00,TRUE
+M006,D02,Omeprazol,20 mg,1 vez/día,08:00,FALSE
+M007,D02,Paracetamol,1 g,si dolor,—,FALSE
+M008,D03,Sintrom,según pauta,1 vez/día,18:00,TRUE
+M009,D03,Omeprazol,20 mg,1 vez/día,08:00,FALSE
+M010,D03,Paracetamol,1 g,si dolor,—,FALSE
+M011,D03,Atorvastatina,20 mg,1 vez/día,22:00,FALSE
+M012,D03,Lorazepam,1 mg,noche,23:00,TRUE
+M013,D04,Omeprazol,20 mg,1 vez/día,08:00,FALSE
+M014,D04,Paracetamol,1 g,si dolor,—,FALSE
+M015,D04,Atorvastatina,20 mg,1 vez/día,22:00,FALSE
+M016,D05,Paracetamol,1 g,si dolor,—,FALSE
+M017,D05,Atorvastatina,20 mg,1 vez/día,22:00,FALSE
+M018,D05,Lorazepam,1 mg,noche,23:00,TRUE
+M019,D05,Furosemida,40 mg,1 vez/día,09:00,TRUE
+M020,D06,Atorvastatina,20 mg,1 vez/día,22:00,FALSE
+M021,D06,Lorazepam,1 mg,noche,23:00,TRUE
+M022,D06,Furosemida,40 mg,1 vez/día,09:00,TRUE
+M023,D06,Enalapril,10 mg,1 vez/día,08:00,TRUE
+M024,D06,Metformina,850 mg,2 veces/día,"08:00,20:00",TRUE
+M025,D07,Lorazepam,1 mg,noche,23:00,TRUE
+M026,D07,Furosemida,40 mg,1 vez/día,09:00,TRUE
+M027,D07,Enalapril,10 mg,1 vez/día,08:00,TRUE
+M028,D08,Furosemida,40 mg,1 vez/día,09:00,TRUE
+M029,D08,Enalapril,10 mg,1 vez/día,08:00,TRUE
+M030,D08,Metformina,850 mg,2 veces/día,"08:00,20:00",TRUE
+M031,D08,Sintrom,según pauta,1 vez/día,18:00,TRUE
+M032,D09,Enalapril,10 mg,1 vez/día,08:00,TRUE
+M033,D09,Metformina,850 mg,2 veces/día,"08:00,20:00",TRUE
+M034,D09,Sintrom,según pauta,1 vez/día,18:00,TRUE
+M035,D09,Omeprazol,20 mg,1 vez/día,08:00,FALSE
+M036,D09,Paracetamol,1 g,si dolor,—,FALSE
+M037,D10,Metformina,850 mg,2 veces/día,"08:00,20:00",TRUE
+M038,D10,Sintrom,según pauta,1 vez/día,18:00,TRUE
+M039,D10,Omeprazol,20 mg,1 vez/día,08:00,FALSE
+M040,D11,Sintrom,según pauta,1 vez/día,18:00,TRUE
+M041,D11,Omeprazol,20 mg,1 vez/día,08:00,FALSE
+M042,D11,Paracetamol,1 g,si dolor,—,FALSE
+M043,D11,Atorvastatina,20 mg,1 vez/día,22:00,FALSE
+M044,D12,Omeprazol,20 mg,1 vez/día,08:00,FALSE
+M045,D12,Paracetamol,1 g,si dolor,—,FALSE
+M046,D12,Atorvastatina,20 mg,1 vez/día,22:00,FALSE
+M047,D12,Lorazepam,1 mg,noche,23:00,TRUE
+M048,D12,Furosemida,40 mg,1 vez/día,09:00,TRUE

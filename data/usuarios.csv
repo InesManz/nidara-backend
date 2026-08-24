@@ -1,0 +1,13 @@
+nombre,email,password,rol
+Marta Ruiz,marta@nidara.app,password123,coordinador
+Javier Ruiz,javier@nidara.app,password123,cuidador
+Lucía Ruiz,lucia@nidara.app,password123,cuidador
+Carlos Vega,carlos@nidara.app,password123,coordinador
+Ana Vega,ana@nidara.app,password123,cuidador
+Pablo Soler,pablo@nidara.app,password123,coordinador
+Elena Soler,elena@nidara.app,password123,cuidador
+Nuria Gil,nuria@nidara.app,password123,coordinador
+Diego Gil,diego@nidara.app,password123,cuidador
+Sara Mora,sara@nidara.app,password123,coordinador
+Hugo Mora,hugo@nidara.app,password123,cuidador
+Admin Nidara,admin@nidara.app,admin1234,coordinador

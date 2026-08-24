@@ -1,0 +1,43 @@
+codigo,dependienteCodigo,titulo,prioridad,asignadoEmail,estado
+T001,D01,Comprar medicación en la farmacia,media,marta@nidara.app,pendiente
+T002,D01,Llevar a revisión médica,alta,javier@nidara.app,en_progreso
+T003,D01,Hacer la compra semanal,media,lucia@nidara.app,hecha
+T004,D02,Llevar a revisión médica,alta,javier@nidara.app,en_progreso
+T005,D02,Hacer la compra semanal,media,lucia@nidara.app,hecha
+T006,D02,Llamar para acompañar por la tarde,baja,carlos@nidara.app,pendiente
+T007,D02,Revisar la tensión arterial,alta,ana@nidara.app,en_progreso
+T008,D03,Hacer la compra semanal,media,lucia@nidara.app,hecha
+T009,D03,Llamar para acompañar por la tarde,baja,carlos@nidara.app,pendiente
+T010,D03,Revisar la tensión arterial,alta,ana@nidara.app,en_progreso
+T011,D04,Llamar para acompañar por la tarde,baja,carlos@nidara.app,pendiente
+T012,D04,Revisar la tensión arterial,alta,ana@nidara.app,en_progreso
+T013,D04,Preparar comidas para la semana,media,pablo@nidara.app,hecha
+T014,D04,Pagar recibos pendientes,baja,elena@nidara.app,pendiente
+T015,D05,Revisar la tensión arterial,alta,ana@nidara.app,en_progreso
+T016,D05,Preparar comidas para la semana,media,pablo@nidara.app,hecha
+T017,D05,Pagar recibos pendientes,baja,elena@nidara.app,pendiente
+T018,D06,Preparar comidas para la semana,media,pablo@nidara.app,hecha
+T019,D06,Pagar recibos pendientes,baja,elena@nidara.app,pendiente
+T020,D06,Acompañar al fisioterapeuta,media,nuria@nidara.app,en_progreso
+T021,D06,Comprar medicación en la farmacia,media,diego@nidara.app,hecha
+T022,D07,Pagar recibos pendientes,baja,elena@nidara.app,pendiente
+T023,D07,Acompañar al fisioterapeuta,media,nuria@nidara.app,en_progreso
+T024,D07,Comprar medicación en la farmacia,media,diego@nidara.app,hecha
+T025,D08,Acompañar al fisioterapeuta,media,nuria@nidara.app,en_progreso
+T026,D08,Comprar medicación en la farmacia,media,diego@nidara.app,hecha
+T027,D08,Llevar a revisión médica,alta,sara@nidara.app,pendiente
+T028,D08,Hacer la compra semanal,media,hugo@nidara.app,en_progreso
+T029,D09,Comprar medicación en la farmacia,media,diego@nidara.app,hecha
+T030,D09,Llevar a revisión médica,alta,sara@nidara.app,pendiente
+T031,D09,Hacer la compra semanal,media,hugo@nidara.app,en_progreso
+T032,D10,Llevar a revisión médica,alta,sara@nidara.app,pendiente
+T033,D10,Hacer la compra semanal,media,hugo@nidara.app,en_progreso
+T034,D10,Llamar para acompañar por la tarde,baja,marta@nidara.app,hecha
+T035,D10,Revisar la tensión arterial,alta,javier@nidara.app,pendiente
+T036,D11,Hacer la compra semanal,media,hugo@nidara.app,en_progreso
+T037,D11,Llamar para acompañar por la tarde,baja,marta@nidara.app,hecha
+T038,D11,Revisar la tensión arterial,alta,javier@nidara.app,pendiente
+T039,D12,Llamar para acompañar por la tarde,baja,marta@nidara.app,hecha
+T040,D12,Revisar la tensión arterial,alta,javier@nidara.app,pendiente
+T041,D12,Preparar comidas para la semana,media,lucia@nidara.app,en_progreso
+T042,D12,Pagar recibos pendientes,baja,carlos@nidara.app,hecha
