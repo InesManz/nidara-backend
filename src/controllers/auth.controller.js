@@ -15,6 +15,12 @@ exports.register = async (req, res, next) => {
     if (!nombre || !email || !password) {
       return res.status(400).json({ message: "Nombre, email y contraseña son obligatorios" });
     }
+    // Política de contraseña: mínimo 8 caracteres, con al menos una letra y un número.
+    if (password.length < 8 || !/[a-zA-Z]/.test(password) || !/[0-9]/.test(password)) {
+      return res.status(400).json({
+        message: "La contraseña debe tener al menos 8 caracteres, incluyendo una letra y un número",
+      });
+    }
     const exists = await User.findOne({ email });
     if (exists) return res.status(409).json({ message: "Ese email ya está registrado" });
 

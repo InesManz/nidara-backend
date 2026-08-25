@@ -9,7 +9,8 @@ exports.list = async (req, res, next) => {
 
 exports.getOne = async (req, res, next) => {
   try {
-    const dep = await Dependent.findById(req.params.id).populate("cuidador", "nombre email");
+    // Solo se puede ver un dependiente propio.
+    const dep = await Dependent.findOne({ _id: req.params.id, cuidador: req.user._id }).populate("cuidador", "nombre email");
     if (!dep) return res.status(404).json({ message: "Dependiente no encontrado" });
     res.json(dep);
   } catch (err) { next(err); }
@@ -24,7 +25,13 @@ exports.create = async (req, res, next) => {
 
 exports.update = async (req, res, next) => {
   try {
-    const dep = await Dependent.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    // No se permite reasignar el dueño desde el body.
+    const { cuidador, ...cambios } = req.body;
+    const dep = await Dependent.findOneAndUpdate(
+      { _id: req.params.id, cuidador: req.user._id },
+      cambios,
+      { new: true }
+    );
     if (!dep) return res.status(404).json({ message: "Dependiente no encontrado" });
     res.json(dep);
   } catch (err) { next(err); }
@@ -32,7 +39,8 @@ exports.update = async (req, res, next) => {
 
 exports.remove = async (req, res, next) => {
   try {
-    await Dependent.findByIdAndDelete(req.params.id);
+    const dep = await Dependent.findOneAndDelete({ _id: req.params.id, cuidador: req.user._id });
+    if (!dep) return res.status(404).json({ message: "Dependiente no encontrado" });
     res.json({ message: "Dependiente eliminado" });
   } catch (err) { next(err); }
 };
