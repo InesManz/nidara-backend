@@ -2,7 +2,7 @@ const Dependent = require("../models/Dependent");
 
 exports.list = async (req, res, next) => {
   try {
-    const deps = await Dependent.find().populate("cuidador", "nombre email").sort("nombre");
+    const deps = await Dependent.find({ cuidador: req.user._id }).populate("cuidador", "nombre email").sort("nombre");
     res.json(deps);
   } catch (err) { next(err); }
 };

@@ -1,9 +1,13 @@
 const Medication = require("../models/Medication");
+const Dependent = require("../models/Dependent");
 
 exports.list = async (req, res, next) => {
   try {
-    const filter = req.query.dependiente ? { dependiente: req.query.dependiente } : {};
-    const meds = await Medication.find(filter).populate("dependiente", "nombre codigo").sort("nombre");
+    // Solo la medicación de los dependientes del usuario en sesión.
+    const misDeps = await Dependent.find({ cuidador: req.user._id }).select("_id");
+    let ids = misDeps.map((d) => d._id);
+    if (req.query.dependiente) ids = ids.filter((id) => String(id) === req.query.dependiente);
+    const meds = await Medication.find({ dependiente: { $in: ids } }).populate("dependiente", "nombre codigo").sort("nombre");
     res.json(meds);
   } catch (err) { next(err); }
 };

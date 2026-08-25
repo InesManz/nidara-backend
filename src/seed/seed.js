@@ -52,7 +52,9 @@ async function run() {
       edad: Number(d.edad),
       ciudad: d.ciudad,
       notas: d.notas,
-      cuidador: userByEmail[d.cuidadorEmail],
+      // Para la demo, todos los dependientes pertenecen a la coordinadora Marta,
+      // de modo que su panel se ve completo. Cada usuario ve solo los suyos.
+      cuidador: userByEmail["marta@nidara.app"],
     }))
   );
   const depByCode = Object.fromEntries(deps.map((d) => [d.codigo, d._id]));

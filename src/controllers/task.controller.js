@@ -1,9 +1,13 @@
 const Task = require("../models/Task");
+const Dependent = require("../models/Dependent");
 
 exports.list = async (req, res, next) => {
   try {
-    const filter = req.query.dependiente ? { dependiente: req.query.dependiente } : {};
-    const tasks = await Task.find(filter)
+    // Solo las tareas de los dependientes del usuario en sesión.
+    const misDeps = await Dependent.find({ cuidador: req.user._id }).select("_id");
+    let ids = misDeps.map((d) => d._id);
+    if (req.query.dependiente) ids = ids.filter((id) => String(id) === req.query.dependiente);
+    const tasks = await Task.find({ dependiente: { $in: ids } })
       .populate("dependiente", "nombre codigo")
       .populate("asignado", "nombre email")
       .sort("estado");
