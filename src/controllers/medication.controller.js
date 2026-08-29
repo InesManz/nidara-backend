@@ -1,5 +1,6 @@
 const Medication = require("../models/Medication");
 const { misDependientes } = require("../utils/ownership");
+const { subirImagen } = require("../utils/cloudinary");
 
 exports.list = async (req, res, next) => {
   try {
@@ -17,7 +18,13 @@ exports.create = async (req, res, next) => {
     if (!ids.some((id) => String(id) === String(req.body.dependiente))) {
       return res.status(403).json({ message: "No puedes añadir medicación a ese dependiente" });
     }
-    const med = await Medication.create(req.body);
+    const foto = await subirImagen(req.file, "nidara/medicacion");
+    const med = await Medication.create({
+      ...req.body,
+      codigo: req.body.codigo || "M-" + Date.now(),
+      critico: req.body.critico === "true" || req.body.critico === true,
+      ...(foto && { foto }),
+    });
     res.status(201).json(med);
   } catch (err) { next(err); }
 };

@@ -1,4 +1,5 @@
 const Dependent = require("../models/Dependent");
+const { subirImagen } = require("../utils/cloudinary");
 
 exports.list = async (req, res, next) => {
   try {
@@ -9,7 +10,6 @@ exports.list = async (req, res, next) => {
 
 exports.getOne = async (req, res, next) => {
   try {
-    // Solo se puede ver un dependiente propio.
     const dep = await Dependent.findOne({ _id: req.params.id, cuidador: req.user._id }).populate("cuidador", "nombre email");
     if (!dep) return res.status(404).json({ message: "Dependiente no encontrado" });
     res.json(dep);
@@ -18,7 +18,8 @@ exports.getOne = async (req, res, next) => {
 
 exports.create = async (req, res, next) => {
   try {
-    const dep = await Dependent.create({ ...req.body, cuidador: req.user._id });
+    const foto = await subirImagen(req.file, "nidara/dependientes");
+    const dep = await Dependent.create({ ...req.body, ...(foto && { foto }), cuidador: req.user._id });
     res.status(201).json(dep);
   } catch (err) { next(err); }
 };
@@ -27,6 +28,8 @@ exports.update = async (req, res, next) => {
   try {
     // No se permite reasignar el dueño desde el body.
     const { cuidador, ...cambios } = req.body;
+    const foto = await subirImagen(req.file, "nidara/dependientes");
+    if (foto) cambios.foto = foto;
     const dep = await Dependent.findOneAndUpdate(
       { _id: req.params.id, cuidador: req.user._id },
       cambios,

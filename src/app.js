@@ -1,9 +1,15 @@
 const express = require("express");
 const cors = require("cors");
+const helmet = require("helmet");
 const { notFound, errorHandler } = require("./middleware/errorHandler");
 
 const app = express();
 
+// Detrás del proxy de Render: necesario para identificar la IP real (rate limit).
+app.set("trust proxy", 1);
+
+// Cabeceras de seguridad HTTP estándar.
+app.use(helmet());
 app.use(cors({ origin: process.env.CLIENT_URL || "*" }));
 app.use(express.json());
 

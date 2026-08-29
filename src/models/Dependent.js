@@ -8,6 +8,7 @@ const dependentSchema = new mongoose.Schema(
     edad: { type: Number, min: 0 },
     ciudad: { type: String, trim: true },
     notas: { type: String, trim: true },
+    foto: { type: String, trim: true },
     // Cuidador coordinador responsable → relación con la colección de usuarios.
     cuidador: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   },

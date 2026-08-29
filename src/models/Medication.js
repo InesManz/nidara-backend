@@ -14,6 +14,7 @@ const medicationSchema = new mongoose.Schema(
     frecuencia: { type: String, trim: true },
     horario: { type: String, trim: true },
     critico: { type: Boolean, default: false },
+    foto: { type: String, trim: true },
     // Registro de confirmaciones de toma (necesidad N2 del documento de usuario).
     ultimaConfirmacion: { type: Date },
     registros: [{ type: Date }],
